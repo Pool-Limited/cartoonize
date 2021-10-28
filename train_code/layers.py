@@ -29,7 +29,7 @@ def spectral_norm(w, iteration=1):
 
     u_hat = u
     v_hat = None
-    for i in range(iteration):
+    for _ in range(iteration):
         """
         power iteration
         Usually iteration = 1 will be enough
@@ -85,8 +85,7 @@ def self_attention(inputs, name='attention', reuse=False):
     
 
     
-if __name__ == '__main__':
-    pass
+pass
     
     
     

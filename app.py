@@ -110,10 +110,15 @@ def handle_requests_by_batch():
               except Empty:
                 continue
 
-            batch_outputs = []
+            batch_outputs = [
+                run(
+                    request['input'][0],
+                    request['input'][1],
+                    request['input'][2],
+                )
+                for request in requests_batch
+            ]
 
-            for request in requests_batch:
-                batch_outputs.append(run(request['input'][0], request['input'][1], request['input'][2]))
 
             for request, output in zip(requests_batch, batch_outputs):
                 request['output'] = output
@@ -140,9 +145,8 @@ def predict():
             if input_file.content_type not in ['image/jpeg', 'image/jpg', 'image/png']:
                 return jsonify({'message': 'Only support jpeg, jpg or png'}), 400
 
-        else :
-            if input_file.content_type not in ['video/mp4']:
-                return jsonify({'message': 'Only support mp4'}), 400
+        elif input_file.content_type not in ['video/mp4']:
+            return jsonify({'message': 'Only support mp4'}), 400
 
         f_id = str(uuid.uuid4())
         f_path = os.path.join(DATA_FOLDER, f_id)

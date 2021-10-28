@@ -169,7 +169,6 @@ def disc_ln(x, channel=32, is_training=True, name='discriminator', patch=True, r
         
 
             
-if __name__ == '__main__':
-    pass
+pass
     
    

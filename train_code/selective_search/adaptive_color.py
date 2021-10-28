@@ -27,7 +27,7 @@ def label2rgb(label_field, image, kind='avg', bg_label=-1, bg_color=(0, 0, 0)):
                 mean = image[mask].mean(axis=0)
                 median = np.median(image[mask], axis=0)
                 color = 0.5*mean + 0.5*median
-            elif 40 < std:
+            elif std > 40:
                 color = np.median(image[mask], axis=0)
         out[mask] = color
     return out

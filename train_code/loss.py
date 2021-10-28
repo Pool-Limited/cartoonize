@@ -74,10 +74,8 @@ class Vgg19:
             conv = tf.nn.conv2d(bottom, filt, [1, 1, 1, 1], padding='SAME')
 
             conv_biases = self.get_bias(name)
-            bias = tf.nn.bias_add(conv, conv_biases)
-
             #relu = tf.nn.relu(bias)
-            return bias
+            return tf.nn.bias_add(conv, conv_biases)
 
 
 
@@ -92,11 +90,7 @@ class Vgg19:
             weights = self.get_fc_weight(name)
             biases = self.get_bias(name)
 
-            # Fully connected layer. Note that the '+' operation automatically
-            # broadcasts the biases.
-            fc = tf.nn.bias_add(tf.matmul(x, weights), biases)
-
-            return fc
+            return tf.nn.bias_add(tf.matmul(x, weights), biases)
 
     def get_conv_filter(self, name):
         return tf.constant(self.data_dict[name][0], name="filter")
@@ -178,14 +172,12 @@ def total_variation_loss(image, k_size=1):
     h, w = image.get_shape().as_list()[1:3]
     tv_h = tf.reduce_mean((image[:, k_size:, :, :] - image[:, :h - k_size, :, :])**2)
     tv_w = tf.reduce_mean((image[:, :, k_size:, :] - image[:, :, :w - k_size, :])**2)
-    tv_loss = (tv_h + tv_w)/(3*h*w)
-    return tv_loss
+    return (tv_h + tv_w)/(3*h*w)
 
 
 
 
-if __name__ == '__main__':
-    pass
+pass
 
 
     

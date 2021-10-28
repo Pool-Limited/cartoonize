@@ -61,5 +61,4 @@ def unet_generator(inputs, channel=32, num_blocks=4, name='generator', reuse=Fal
         return x4
 
 
-if __name__ == '__main__':
-    pass
+pass
