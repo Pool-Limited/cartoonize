@@ -1,11 +1,11 @@
-<img src="https://raw.githubusercontent.com/DariuszO/White-box-Cartoonization/master/paper/shinjuku.jpg" align="left" width= 100%;>
+<img src="https://raw.githubusercontent.com/DariuszO/cartoonize/master/paper/shinjuku.jpg" align="left" width= 100%;>
 
 
 <br><br><br>
 
 # [CVPR2020]Learning to Cartoonize Using White-box Cartoon Representations
 
-[![Run on Ainize](https://ainize.ai/images/run_on_ainize_button.svg)](https://ainize.web.app/redirect?git_repo=https://github.com/DariuszO/White-box-Cartoonization)
+[![Run on Ainize](https://ainize.ai/images/run_on_ainize_button.svg)](https://ainize.web.app/redirect?git_repo=https://github.com/DariuszO/cartoonize)
 
 [project page](https://systemerrorwang.github.io/White-box-Cartoonization/) |   [paper](https://github.com/SystemErrorWang/White-box-Cartoonization/blob/master/paper/06791.pdf) |   [twitter](https://twitter.com/IlIIlIIIllIllII/status/1243108510423896065) |   [zhihu](https://zhuanlan.zhihu.com/p/117422157) |   [bilibili](https://www.bilibili.com/video/av56708333) |  [facial model](https://github.com/SystemErrorWang/FacialCartoonization)
 
@@ -13,24 +13,24 @@
 - Improved method for facial images are now available:
 - https://github.com/SystemErrorWang/FacialCartoonization
 
-<img src="https://raw.githubusercontent.com/DariuszO/White-box-Cartoonization/master/images/method.jpg" width= 100%;/>
-<img src="https://raw.githubusercontent.com/DariuszO/White-box-Cartoonization/master/images/use_cases.jpg" width= 100%;/>
+<img src="https://raw.githubusercontent.com/DariuszO/cartoonize/master/images/method.jpg" width= 100%;/>
+<img src="https://raw.githubusercontent.com/DariuszO/cartoonize/master/images/use_cases.jpg" width= 100%;/>
 
 ## Use cases
 
 ### Scenery
-<img src="https://raw.githubusercontent.com/DariuszO/White-box-Cartoonization/master/images/city1.jpg" width= 100%;/>
-<img src="https://raw.githubusercontent.com/DariuszO/White-box-Cartoonization/master/images/city2.jpg" width= 100%;/>
+<img src="https://raw.githubusercontent.com/DariuszO/cartoonize/master/images/city1.jpg" width= 100%;/>
+<img src="https://raw.githubusercontent.com/DariuszO/cartoonize/master/images/city2.jpg" width= 100%;/>
 
 ### Food
-<img src="https://raw.githubusercontent.com/DariuszO/White-box-Cartoonization/master/images/food.jpg" width= 100%;/>
+<img src="https://raw.githubusercontent.com/DariuszO/cartoonize/master/images/food.jpg" width= 100%;/>
 
 ### Indoor Scenes
-<img src="https://raw.githubusercontent.com/DariuszO/White-box-Cartoonization/master/images/home.jpg" width= 100%;/>
+<img src="https://raw.githubusercontent.com/DariuszO/cartoonize/master/images/home.jpg" width= 100%;/>
 
 ### People
-<img src="https://raw.githubusercontent.com/DariuszO/White-box-Cartoonization/master/images/person1.jpg" width= 100%;/>
-<img src="https://raw.githubusercontent.com/DariuszO/White-box-Cartoonization/master/images/person2.jpg" width= 100%;/>
+<img src="https://raw.githubusercontent.com/DariuszO/cartoonize/master/images/person1.jpg" width= 100%;/>
+<img src="https://raw.githubusercontent.com/DariuszO/cartoonize/master/images/person2.jpg" width= 100%;/>
 
 ### More Images Are Shown In The Supplementary Materials
 
