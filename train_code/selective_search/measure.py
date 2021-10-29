@@ -5,14 +5,14 @@ def _calculate_color_sim(ri, rj):
     """
         Calculate color similarity using histogram intersection
     """
-    return sum([min(a, b) for a, b in zip(ri["color_hist"], rj["color_hist"])])
+    return sum(min(a, b) for a, b in zip(ri["color_hist"], rj["color_hist"]))
 
 
 def _calculate_texture_sim(ri, rj):
     """
         Calculate texture similarity using histogram intersection
     """
-    return sum([min(a, b) for a, b in zip(ri["texture_hist"], rj["texture_hist"])])
+    return sum(min(a, b) for a, b in zip(ri["texture_hist"], rj["texture_hist"]))
 
 
 def _calculate_size_sim(ri, rj, imsize):

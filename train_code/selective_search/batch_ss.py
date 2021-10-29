@@ -47,5 +47,4 @@ def selective_adacolor(batch_image, seg_num=200, power=1):
     return np.array(batch_out)
 
 
-if __name__ == '__main__':
-    pass
+pass

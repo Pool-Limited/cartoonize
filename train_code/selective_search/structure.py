@@ -59,9 +59,7 @@ class HierarchicalGrouping(object):
 
         boundary = find_boundaries(self.img_seg == label,
                                    mode='outer')
-        neighbors = np.unique(self.img_seg[boundary]).tolist()
-
-        return neighbors
+        return np.unique(self.img_seg[boundary]).tolist()
 
     def get_highest_similarity(self):
         return sorted(self.s.items(), key=lambda i: i[1])[-1][0]
@@ -100,11 +98,7 @@ class HierarchicalGrouping(object):
     def remove_similarities(self, i, j):
 
         # mark keys for region pairs to be removed
-        key_to_delete = []
-        for key in self.s.keys():
-            if (i in key) or (j in key):
-                key_to_delete.append(key)
-
+        key_to_delete = [key for key in self.s.keys() if (i in key) or (j in key)]
         for key in key_to_delete:
             del self.s[key]
 
@@ -124,7 +118,7 @@ class HierarchicalGrouping(object):
                                           self.sim_strategy)
 
     def is_empty(self):
-        return True if not self.s.keys() else False
+        return not self.s.keys()
     
     
     def num_regions(self):

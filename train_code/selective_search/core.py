@@ -102,17 +102,13 @@ def box_filter(boxes, min_size=20, max_ratio=None, topN=None):
             continue
 
         # Filter for box ratio
-        if max_ratio:
-            if w / h > max_ratio or h / w > max_ratio:
-                continue
+        if max_ratio and (w / h > max_ratio or h / w > max_ratio):
+            continue
 
         proposal.append(box)
 
-    if topN:
-        if topN <= len(proposal):
-            return proposal[:topN]
-        else:
-            return proposal
+    if topN and topN <= len(proposal):
+        return proposal[:topN]
     else:
         return proposal
 

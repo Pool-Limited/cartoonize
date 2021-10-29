@@ -17,8 +17,7 @@ def tf_box_filter(x, r):
     weight = 1 / (k_size ** 2)
     box_kernel = weight * np.ones((k_size, k_size, ch, 1))
     box_kernel = np.array(box_kernel).astype(np.float32)
-    output = tf.nn.depthwise_conv2d(x, box_kernel, [1, 1, 1, 1], 'SAME')
-    return output
+    return tf.nn.depthwise_conv2d(x, box_kernel, [1, 1, 1, 1], 'SAME')
 
 
 def guided_filter(x, y, r, eps=1e-2):
@@ -38,9 +37,7 @@ def guided_filter(x, y, r, eps=1e-2):
     mean_A = tf_box_filter(A, r) / N
     mean_b = tf_box_filter(b, r) / N
 
-    output = tf.add(mean_A * x, mean_b, name='final_add')
-
-    return output
+    return tf.add(mean_A * x, mean_b, name='final_add')
 
 
 def fast_guided_filter(lr_x, lr_y, hr_x, r=1, eps=1e-8):
@@ -63,9 +60,7 @@ def fast_guided_filter(lr_x, lr_y, hr_x, r=1, eps=1e-8):
     mean_A = tf.image.resize_images(A, hr_x_shape[1: 3])
     mean_b = tf.image.resize_images(b, hr_x_shape[1: 3])
 
-    output = mean_A * hr_x + mean_b
-
-    return output
+    return mean_A * hr_x + mean_b
 
 
 if __name__ == '__main__':
