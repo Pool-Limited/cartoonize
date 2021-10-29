@@ -1,4 +1,8 @@
 __pycache__/
+node_modules
 .idea/
 .DS_Store
 .vercel
+*.mp4
+*.lock
+npm-debug.log
