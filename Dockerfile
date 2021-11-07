@@ -203,7 +203,7 @@ RUN \
 ### END DEV TOOLS ###
 
 # Make folders (Not recommended to edit)
-ENV WORKSPACE_HOME="/test_code"
+ENV WORKSPACE_HOME="/workspace"
 RUN \
     if [ -e $WORKSPACE_HOME ] ; then \
     chmod a+rwx $WORKSPACE_HOME; \   
@@ -213,4 +213,4 @@ RUN \
 ENV HOME=$WORKSPACE_HOME
 WORKDIR $WORKSPACE_HOME
 
-CMD python3 cartoonize.py
+CMD python3 app.py
