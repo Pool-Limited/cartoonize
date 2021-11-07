@@ -2,7 +2,7 @@ onnx==1.10.2
 Flask==1.0.2
 Pillow==6.2.0
 opencv_python==4.2.0.34
-tensorflow==2.0.0
+tensorflow==2.7.0
 scikit-video==1.1.11
 tf_slim==1.1.0
 waitress==1.4.4
