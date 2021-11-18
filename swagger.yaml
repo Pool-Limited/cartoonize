@@ -14,10 +14,10 @@ info:
   version: "0.1"
   license:
     name: "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-    url: https://github.com/DariuszO/cartoonize#license
+    url: https://github.com/pool-limited/cartoonize#license
 
 servers:
-  - url: https://main-cartoonize-dariuszo.endpoint.ainize.ai/
+  - url: https://main-cartoonize-pool-limited.endpoint.ainize.ai/
 
 paths:
   /predict:
